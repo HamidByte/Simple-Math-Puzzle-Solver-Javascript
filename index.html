@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Simple Puzzle Game in Javascript</title>
+
+	<link rel="stylesheet" href="stylesheets/style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="javascripts/script.js"></script>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Simple Puzzle Game in Javascript</h1>
+		</header>
+		<div class="wrapper">
+			<table>
+				<tr>
+					<td><div class="box top-left">?</div></td>
+					<td><h1>+</h1></td>
+					<td><div class="box top-right">?</div></td>
+					<td><h1>=</h1></td>
+					<td><input type="text" id="rightFirstInput" name="rightFirstInput" pattern="\d*" minlength="1" maxlength="2" value="8"></td>
+				</tr>
+				<tr>
+					<td><h1>+</h1></td>
+					<td></td>
+					<td><h1>+</h1></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><div class="box bottom-left">?</div></td>
+					<td><h1>-</h1></td>
+					<td><div class="box bottom-right">?</div></td>
+					<td><h1>=</h1></td>
+					<td><input type="text" id="rightSecondInput" name="rightSecondInput" pattern="\d*" minlength="1" maxlength="2" value="6"></td>
+				</tr>
+				<tr>
+					<td><h1>=</h1></td>
+					<td></td>
+					<td><h1>=</h1></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><input type="text" id="bottomFirstInput" name="bottomFirstInput" pattern="\d*" minlength="1" maxlength="2" value="13"></td>
+					<td></td>
+					<td><input type="text" id="bottomSecondInput" name="bottomSecondInput" pattern="\d*" minlength="1" maxlength="2" value="8"></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+			<button type="button" id="submitButton" onclick="calculatePuzzle()">Calculate</button>
+			<button type="button" id="resetButton" onclick="resetPuzzle()">Reset</button>
+		</div>
+	</div>
+</body>
+</html>

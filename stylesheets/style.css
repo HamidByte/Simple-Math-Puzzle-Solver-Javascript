@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic);
+
+* {
+	margin: 0 auto;
+	padding 0;
+}
+
+body {
+	background: #f3f3f3;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, div, span, a, button {
+	font-family: 'Lato', 'Open Sans', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+}
+
+a {
+	color: #016aba;
+	text-decoration: none;
+}
+
+.container {
+	max-width: 1024px;
+	min-height: 100vh;
+	background: #f9f9f9;
+	margin: 0 auto;
+}
+
+header {
+	height: 100px;
+	color: #FFF;
+	text-align: center;
+	padding-top: 20px;
+	background: #00cc99;
+}
+
+.wrapper {
+	max-width: 800px;
+	text-align: center;
+	margin-top: 30px;
+}
+
+table {
+	margin-bottom: 30px;
+}
+
+.box {
+	width: 100px;
+	height: 100px;
+	font-weight: bold;
+	font-size: 40px;
+	border: 1px dotted #999;
+	padding-top: 20px;
+	margin: 0 20px;
+}
+
+.top-left {background-color: #FFD5FF;}
+.top-right {background-color: #92D1C3;}
+.bottom-left {background-color: #C8F035;}
+.bottom-right {background-color: #F9CB40;}
+
+#rightFirstInput, #rightSecondInput, #bottomFirstInput, #bottomSecondInput {
+	width: 100px;
+	height: 100px;
+	padding: 10px 0 0 20px;
+	font-weight: bold;
+	font-size: 40px;
+}
+
+#rightFirstInput, #rightSecondInput {
+	margin-left: 20px;
+}
+
+#submitButton, #resetButton {
+	background-color: #60a3bc;
+	color: #fff;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 20px;
+	transition: all 0.4s ease 0s;
+}
+
+#submitButton {
+	width: 300px;
+	height: 100px;
+}
+
+#resetButton {
+	width: 100px;
+	height: 100px;
+}
+
+#submitButton:hover, #resetButton:hover {
+	background: #434343;
+	border-color: #f6b93b;
+	transition: all 0.4s ease 0s;
+}

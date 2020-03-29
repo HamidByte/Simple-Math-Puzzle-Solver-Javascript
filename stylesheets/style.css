@@ -2,7 +2,7 @@
 
 * {
 	margin: 0 auto;
-	padding 0;
+	padding: 0;
 }
 
 body {
@@ -10,20 +10,13 @@ body {
 }
 
 body, h1, h2, h3, h4, h5, h6, p, div, span, a, button {
-	font-family: 'Lato', 'Open Sans', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+	font-family: 'Lato', 'Open Sans', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, 'sans-serif';
 	line-height: 1.5;
 }
 
 a {
 	color: #016aba;
 	text-decoration: none;
-}
-
-.container {
-	max-width: 1024px;
-	min-height: 100vh;
-	background: #f9f9f9;
-	margin: 0 auto;
 }
 
 header {
@@ -34,10 +27,29 @@ header {
 	background: #00cc99;
 }
 
+.container {
+	max-width: 1920px;
+	min-height: 100vh;
+	background: #f9f9f9;
+	margin: 0 auto;
+}
+
 .wrapper {
-	max-width: 800px;
-	text-align: center;
+	max-width: 900px;
 	margin-top: 30px;
+	text-align: center;
+	background-color: yellow;
+}
+
+.left {
+	text-align: center;
+	float: left;
+}
+
+.right {
+	margin-left: 30px;
+	text-align: center;
+	float: right;
 }
 
 table {
@@ -94,4 +106,57 @@ table {
 	background: #434343;
 	border-color: #f6b93b;
 	transition: all 0.4s ease 0s;
+}
+
+#downloadButton {
+	background-color: #4CAF50; /* Green */
+	margin-top: 30px;
+	padding: 16px 30px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	text-decoration: none;
+	border: none;
+	border-radius: 5px;
+	display: inline-block;
+	transition-duration: all 0.5s;
+	cursor: pointer;
+}
+
+#downloadButton span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+#downloadButton span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+#downloadButton:hover span {
+	padding-right: 25px;
+}
+
+#downloadButton:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+#previewScreenshot {
+	width:400px;
+	height:300px;
+	border: 2px solid #999;
+	padding: 5px;
+}
+
+canvas {
+	max-width: 100%;
+	max-height: 100%;
 }

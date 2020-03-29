@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- Required meta tags -->
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Simple Puzzle Solver in Javascript</title>
 
+	<!-- CSS -->
 	<link rel="stylesheet" href="stylesheets/style.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<!-- HTML2Canvas -->
+	<script src="javascripts/html2canvas.js"></script>
+
+	<!-- Javascript File -->
 	<script src="javascripts/script.js"></script>
+	<script src="javascripts/screenshot.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -16,46 +32,57 @@
 			<h1>Simple Puzzle Solver in Javascript</h1>
 		</header>
 		<div class="wrapper">
-			<table>
-				<tr>
-					<td><div class="box top-left">?</div></td>
-					<td><h1>+</h1></td>
-					<td><div class="box top-right">?</div></td>
-					<td><h1>=</h1></td>
-					<td><input type="text" id="rightFirstInput" name="rightFirstInput" pattern="\d*" minlength="1" maxlength="2" value="8"></td>
-				</tr>
-				<tr>
-					<td><h1>+</h1></td>
-					<td></td>
-					<td><h1>+</h1></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><div class="box bottom-left">?</div></td>
-					<td><h1>-</h1></td>
-					<td><div class="box bottom-right">?</div></td>
-					<td><h1>=</h1></td>
-					<td><input type="text" id="rightSecondInput" name="rightSecondInput" pattern="\d*" minlength="1" maxlength="2" value="6"></td>
-				</tr>
-				<tr>
-					<td><h1>=</h1></td>
-					<td></td>
-					<td><h1>=</h1></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="text" id="bottomFirstInput" name="bottomFirstInput" pattern="\d*" minlength="1" maxlength="2" value="13"></td>
-					<td></td>
-					<td><input type="text" id="bottomSecondInput" name="bottomSecondInput" pattern="\d*" minlength="1" maxlength="2" value="8"></td>
-					<td></td>
-					<td></td>
-				</tr>
-			</table>
-			<button type="button" id="submitButton" onclick="solvePuzzle()">Solve</button>
-			<button type="button" id="resetButton" onclick="resetPuzzle()">Reset</button>
+			<!-- Puzzle Solver Div -->
+			<div class="left">
+				<table id="areaScreenshot">
+					<tr>
+						<td><div class="box top-left">?</div></td>
+						<td><h1>+</h1></td>
+						<td><div class="box top-right">?</div></td>
+						<td><h1>=</h1></td>
+						<td><input type="text" id="rightFirstInput" name="rightFirstInput" pattern="\d*" minlength="1" maxlength="2" value="8"></td>
+					</tr>
+					<tr>
+						<td><h1>+</h1></td>
+						<td></td>
+						<td><h1>+</h1></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><div class="box bottom-left">?</div></td>
+						<td><h1>-</h1></td>
+						<td><div class="box bottom-right">?</div></td>
+						<td><h1>=</h1></td>
+						<td><input type="text" id="rightSecondInput" name="rightSecondInput" pattern="\d*" minlength="1" maxlength="2" value="6"></td>
+					</tr>
+					<tr>
+						<td><h1>=</h1></td>
+						<td></td>
+						<td><h1>=</h1></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><input type="text" id="bottomFirstInput" name="bottomFirstInput" pattern="\d*" minlength="1" maxlength="2" value="13"></td>
+						<td></td>
+						<td><input type="text" id="bottomSecondInput" name="bottomSecondInput" pattern="\d*" minlength="1" maxlength="2" value="8"></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+				<button type="button" id="submitButton" onclick="solvePuzzle()">Solve</button>
+				<button type="button" id="resetButton" onclick="resetPuzzle()">Reset</button>
+			</div>
+
+			<!-- Preview Screenshot Div -->
+			<div class="right">
+				<a id="captureScreenshot"></a>
+				<div id="previewScreenshot">Click download button to get the screenshot!</div>
+				<button id="downloadButton" onclick="javascript:generateScreenshot()"><span>Download Screenshot</span></button>
+			</div>
 		</div>
 	</div>
+
 </body>
 </html>

@@ -8,5 +8,5 @@
 
       $ Live Preview is not up-to-date
       $ Screenshot downloading function may not work in Live Preview.
-      $ However it should perfectly run in your computer if you run the code.
+      $ However it should perfectly run in your computer if you run the index.html.
       

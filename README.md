@@ -2,4 +2,4 @@
 
 ## Author: Hamid
 
-Live Demo: https://codepen.io/mhamid49/full/QWbzYXa
+Live Preview: https://codepen.io/mhamid49/full/QWbzYXa

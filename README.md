@@ -1,6 +1,8 @@
 # Simple Puzzle Solver in Javascript
+### Author: Hamid Hussain
+---
 
-## Author: Hamid
+- #### Live Preview: [Click Here!](https://codepen.io/mhamid49/full/QWbzYXa)
 
-Live Preview: https://codepen.io/mhamid49/full/QWbzYXa
-Download Preview may not work in Live Preview. But code should perfectly run in your computer.
+  $ Screenshot downloading function may not work in Live Preview.
+  $ However it should perfectly run in your computer if you run the code.

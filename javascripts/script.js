@@ -88,4 +88,7 @@ function resetPuzzle() {
 	document.querySelector('.top-right').innerText = "?";
 	document.querySelector('.bottom-left').innerText = "?";
 	document.querySelector('.bottom-right').innerText = "?";
+
+	// Reset Preview Screenshot
+	document.querySelector('#previewScreenshot').innerText = "Click download button to get the screenshot!"
 }

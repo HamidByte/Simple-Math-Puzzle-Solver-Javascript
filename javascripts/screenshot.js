@@ -10,6 +10,17 @@ function randomizeFileName() {
 
 // Generate Screenshot
 function generateScreenshot() {
+    // html2canvas
+	html2canvas(document.getElementById('areaScreenshot'), {
+		onrendered: function(canvas) {
+			$('#previewScreenshot').html("");
+			$('#previewScreenshot').append(canvas);
+		}
+	});
+}
+
+// Download Screenshot
+function downloadScreenshot() {
     // Rename file
     var renameFile = randomizeFileName() + ".png";
 

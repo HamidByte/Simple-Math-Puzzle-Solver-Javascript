@@ -1,4 +1,4 @@
-# Simple Puzzle Game in Javascript
+# Simple Puzzle Solver in Javascript
 
 ## Author: Hamid
 

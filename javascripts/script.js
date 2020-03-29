@@ -6,8 +6,8 @@ function maximumCalculate(a, b, c, d) {
 	return e >= f ? e : f;
 }
 
-// On Click Calculate Puzzle Function
-function calculatePuzzle() {
+// On Click Puzzle Solver Function
+function solvePuzzle() {
 	// Input fields
 	var rightFirstInput = document.querySelector('#rightFirstInput');
 	var rightSecondInput = document.querySelector('#rightSecondInput');

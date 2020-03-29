@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic);
-
 * {
 	margin: 0 auto;
 	padding: 0;
@@ -27,6 +25,20 @@ header {
 	background: #00cc99;
 }
 
+footer {
+	clear: both;
+	padding: 10px 20px;
+	margin-top: 600px;
+	background-color: #777;
+}
+
+footer p {
+	color: #fff;
+	text-align: justify;
+	letter-spacing: 3px;
+	
+}
+
 .container {
 	max-width: 1920px;
 	min-height: 100vh;
@@ -37,8 +49,8 @@ header {
 .wrapper {
 	max-width: 900px;
 	margin-top: 30px;
+	margin-bottom: 30px;
 	text-align: center;
-	background-color: yellow;
 }
 
 .left {
@@ -108,7 +120,7 @@ table {
 	transition: all 0.4s ease 0s;
 }
 
-#downloadButton {
+.downloadButton {
 	background-color: #4CAF50; /* Green */
 	margin-top: 30px;
 	padding: 16px 30px;
@@ -120,18 +132,18 @@ table {
 	border: none;
 	border-radius: 5px;
 	display: inline-block;
-	transition-duration: all 0.5s;
+	transition-duration: 0.5s;
 	cursor: pointer;
 }
 
-#downloadButton span {
+.downloadButton span {
 	cursor: pointer;
 	display: inline-block;
 	position: relative;
 	transition: 0.5s;
 }
 
-#downloadButton span:after {
+.downloadButton span:after {
 	content: '\00bb';
 	position: absolute;
 	opacity: 0;
@@ -140,11 +152,11 @@ table {
 	transition: 0.5s;
 }
 
-#downloadButton:hover span {
+.downloadButton:hover span {
 	padding-right: 25px;
 }
 
-#downloadButton:hover span:after {
+.downloadButton:hover span:after {
 	opacity: 1;
 	right: 0;
 }

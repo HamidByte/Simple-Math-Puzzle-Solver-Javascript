@@ -4,7 +4,7 @@ function randomizeFileName() {
     var today = new Date();
     var date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
     var time = today.getHours() + "-" + today.getMinutes() + "-" + today.getSeconds();
-    return "puzzle-solver" + '_' + date + '_' + time;
+    return "puzzle_solver" + '_' + date + '_' + time;
     //return Math.floor((Math.random() * 1000000) + 1);
 }
 

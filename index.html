@@ -37,21 +37,21 @@
 				<table id="areaScreenshot">
 					<tr>
 						<td><div class="box top-left">?</div></td>
-						<td><h1>+</h1></td>
+						<td><input type="text" id="topOperator" name="topOperator" pattern="[/*+-]" minlength="1" maxlength="1" value="+"></td>
 						<td><div class="box top-right">?</div></td>
 						<td><h1>=</h1></td>
 						<td><input type="text" id="rightFirstInput" name="rightFirstInput" pattern="\d*" minlength="1" maxlength="2" value="8"></td>
 					</tr>
 					<tr>
-						<td><h1>+</h1></td>
+						<td><input type="text" id="leftOperator" name="leftOperator" minlength="1" maxlength="1" value="+"></td>
 						<td></td>
-						<td><h1>+</h1></td>
+						<td><input type="text" id="rightOperator" name="rightOperator" minlength="1" maxlength="1" value="+"></td>
 						<td></td>
 						<td></td>
 					</tr>
 					<tr>
 						<td><div class="box bottom-left">?</div></td>
-						<td><h1>-</h1></td>
+						<td><input type="text" id="bottomOperator" name="bottomOperator" minlength="1" maxlength="1" value="-"></td>
 						<td><div class="box bottom-right">?</div></td>
 						<td><h1>=</h1></td>
 						<td><input type="text" id="rightSecondInput" name="rightSecondInput" pattern="\d*" minlength="1" maxlength="2" value="6"></td>

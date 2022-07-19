@@ -18,6 +18,12 @@ function solvePuzzle() {
 	var bf = parseInt(bottomFirstInput.value);
 	var bs = parseInt(bottomSecondInput.value);
 
+	// Operators
+	var topOperator = document.querySelector('#topOperator').value;
+	var leftOperator = document.querySelector('#leftOperator').value;
+	var rightOperator = document.querySelector('#rightOperator').value;
+	var bottomOperator = document.querySelector('#bottomOperator').value;
+
 	// Divs
 	var topLeft = document.querySelector('.top-left');
 	var topRight = document.querySelector('.top-right');
@@ -27,7 +33,7 @@ function solvePuzzle() {
 	// Image Element
 	var imageElement = document.createElement("img");
 	imageElement.setAttribute("src", "images/sad_smiley.png");
-	//imageElement.src = "../images/sad_smiley.png";
+	//imageElement.src = "images/sad_smiley.png";
 	imageElement.setAttribute("width", "50");
 	imageElement.setAttribute("height", "50");
 	imageElement.setAttribute("alt", "Sad Smiley");
@@ -42,7 +48,7 @@ function solvePuzzle() {
 			for(var c = 0; c <= maxValue; c+=0.5) {
 				for(var d = 0; d <= maxValue; d+=0.5) {
 					// Constraints
-					if(a + b == rf && c - d == rs && a + c == bf && b + d == bs) {
+					if(eval(a + topOperator + b) == rf && eval(c + bottomOperator + d) == rs && eval(a + leftOperator + c) == bf && eval(b + rightOperator + d) == bs) {
 						topLeft.innerText = a.toFixed(1);
 						topRight.innerText = b.toFixed(1);
 						bottomLeft.innerText = c.toFixed(1);
@@ -83,6 +89,12 @@ function resetPuzzle() {
 	document.querySelector('#bottomFirstInput').value = 13;
 	document.querySelector('#bottomSecondInput').value = 8;
 
+	// Operators
+	document.querySelector('#topOperator').value = "+";
+	document.querySelector('#leftOperator').value = "+";
+	document.querySelector('#rightOperator').value = "+";
+	document.querySelector('#bottomOperator').value = "-";
+	
 	// Divs
 	document.querySelector('.top-left').innerText = "?";
 	document.querySelector('.top-right').innerText = "?";
